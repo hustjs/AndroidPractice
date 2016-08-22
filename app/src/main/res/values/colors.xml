@@ -12,4 +12,12 @@
     <color name="bg_button_login">#380813</color>
     <color name="grid_state_pressed">#1Affffff</color>
     <color name="grid_state_focused">#80000000</color>
+    <!--SwipeBack starts-->
+    <!-- androidColor -->
+    <color name="androidColorA">#33B5E5</color>
+    <color name="androidColorB">#AA66CC</color>
+    <color name="androidColorC">#99CC00</color>
+    <color name="androidColorD">#FFBB33</color>
+    <color name="androidColorE">#FF4444</color>
+    <!--SwipeBack ends-->
 </resources>

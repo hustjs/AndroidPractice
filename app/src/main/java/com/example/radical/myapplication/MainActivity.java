@@ -77,6 +77,12 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    @OnClick(R.id.btn_swipeback)
+    void swipeBackTest() {
+        intent = new Intent(MainActivity.this, SwipeBackActivity.class);
+        startActivity(intent);
+    }
+
 
     /**
      * 显示扫描结果

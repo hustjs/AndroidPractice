@@ -94,6 +94,14 @@
         android:layout_toRightOf="@+id/btn_tab"
         android:text="Tabbed" />
 
+    <Button
+        android:id="@+id/btn_swipeback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/multiLang"
+        android:layout_toRightOf="@+id/multiLang"
+        android:text="SwipeBack" />
+
 
 
     <TextView

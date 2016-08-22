@@ -44,7 +44,8 @@
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity android:name=".ButterActivity" />
         <activity android:name=".TabTestActivity" />
-        <activity android:name=".ToolbarActivity" />
+        <activity android:name=".ToolbarActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity
             android:name=".TabbedActivity"
             android:label="@string/title_activity_tabbed"
@@ -66,7 +67,9 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".SettingsActivity"
-            android:label="@string/title_activity_settings"></activity>
+            android:label="@string/title_activity_settings" />
+        <activity android:name=".SwipeBackActivity"
+            android:theme="@style/SwipeBackTheme"></activity>
     </application>
 
 </manifest>
