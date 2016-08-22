@@ -63,6 +63,8 @@ public class BlankFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_blank, container, false);
+        TextView textView=(TextView) view;
+        textView.setText("Fragment Tab "+(mPage+1));
         return view;
     }
 

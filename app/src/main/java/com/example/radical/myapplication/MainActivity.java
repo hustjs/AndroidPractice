@@ -1,19 +1,14 @@
 package com.example.radical.myapplication;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.text.style.MetricAffectingSpan;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -39,6 +34,50 @@ public class MainActivity extends AppCompatActivity {
         intent = new Intent(MainActivity.this, TabTestActivity.class);
         startActivity(intent);
     }
+
+    @OnClick(R.id.btn_toolbar)
+    void toolBarTest() {
+        intent = new Intent(MainActivity.this, ToolbarActivity.class);
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.btn_basic)
+    void basicTest() {
+        intent = new Intent(MainActivity.this, BasicDemoActivity.class);
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.btn_login)
+    void loginTest() {
+        intent = new Intent(MainActivity.this, LoginActivity.class);
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.btn_setting)
+    void settingTest() {
+        intent = new Intent(MainActivity.this, SettingsActivity.class);
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.btn_nav)
+    void navigationTest() {
+        intent = new Intent(MainActivity.this, NavigationActivity.class);
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.btn_scroll)
+    void scrollTest() {
+        intent = new Intent(MainActivity.this, ScrollingActivity.class);
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.btn_tabbed)
+    void tabbedTest() {
+        intent = new Intent(MainActivity.this, TabbedActivity.class);
+        startActivity(intent);
+    }
+
+
     /**
      * 显示扫描结果
      */
