@@ -44,8 +44,9 @@
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity android:name=".ButterActivity" />
         <activity android:name=".TabTestActivity" />
-        <activity android:name=".ToolbarActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity
+            android:name=".ToolbarActivity"
+            android:theme="@style/MyToolbarTheme" />
         <activity
             android:name=".TabbedActivity"
             android:label="@string/title_activity_tabbed"
@@ -53,7 +54,7 @@
         <activity
             android:name=".BasicDemoActivity"
             android:label="@string/title_activity_basic_demo"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login" />
@@ -68,8 +69,12 @@
         <activity
             android:name=".SettingsActivity"
             android:label="@string/title_activity_settings" />
-        <activity android:name=".SwipeBackActivity"
-            android:theme="@style/SwipeBackTheme"></activity>
+        <activity
+            android:name=".SwipeBackActivity"
+            android:theme="@style/SwipeBackTheme" />
+        <activity android:name=".TweenActivity" />
+        <activity android:name=".ObjAnimationActivity" />
+        <activity android:name=".ImmersiveActivity"></activity>
     </application>
 
 </manifest>

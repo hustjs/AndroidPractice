@@ -1,1 +1,8 @@
-<resources></resources>
+<resources>
+    <style name="MyToolbarTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--Navigation bar color-->
+        <!--<item name="android:navigationBarColor">@color/accent_material_light</item>-->
+        <!--Status bar color-->
+        <item name="android:statusBarColor">?attr/colorPrimary</item>
+    </style>
+</resources>

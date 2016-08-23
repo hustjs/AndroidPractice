@@ -35,6 +35,7 @@ public class TabTestActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         pagerAdapter = new FragmentPagerAdapter(getSupportFragmentManager(), this);
         viewPager.setAdapter(pagerAdapter);
+        viewPager.setOffscreenPageLimit(4);
         tabLayout.setupWithViewPager(viewPager);
         tabLayout.setTabMode(TabLayout.MODE_FIXED);
         // Iterate over all tabs and set the custom view

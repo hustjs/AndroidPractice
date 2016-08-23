@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.radical.myapplication.R;
 
@@ -49,6 +50,24 @@ public class BlankFragment extends Fragment {
         return fragment;
     }
 
+    private boolean mHasLoadedOnce = false;
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        if (this.isVisible()) {
+            // we check that the fragment is becoming visible
+            if (isVisibleToUser && !mHasLoadedOnce ) {
+
+                // async http request here
+
+                lazyLoad();
+            }
+        }
+        super.setUserVisibleHint(isVisibleToUser);
+    }
+
+
+
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,6 +89,19 @@ public class BlankFragment extends Fragment {
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+//        setUserVisibleHint(true);
         super.onActivityCreated(savedInstanceState);
+        //第一个fragment会调用
+        if (getUserVisibleHint())
+            lazyLoad();
+    }
+
+    private void lazyLoad() {
+        //如果没有加载过就加载，否则就不再加载了
+        if(!mHasLoadedOnce){
+            //加载数据操作
+            mHasLoadedOnce=true;
+        }
+        Toast.makeText(getActivity(),"Lazy Load",Toast.LENGTH_SHORT).show();
     }
 }

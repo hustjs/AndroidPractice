@@ -11,12 +11,12 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
+        android:fitsSystemWindows="true"
         android:elevation="4dp"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
     <android.support.v4.widget.DrawerLayout
-        android:layout_below="@+id/my_toolbar"
         android:id="@+id/drawer"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -51,6 +51,7 @@
             android:id="@+id/left_drawer"
             android:scrollbars="vertical"
             android:layout_width="240dp"
+            android:fitsSystemWindows="true"
             android:layout_height="match_parent"
             android:layout_gravity="left|start"
             android:choiceMode="singleChoice"
@@ -73,7 +74,7 @@
             android:text="左侧的按钮" />-->
         <!--</LinearLayout>-->
 
-        <LinearLayout
+        <!--<LinearLayout
             android:id="@+id/right"
             android:layout_width="220dp"
             android:layout_height="match_parent"
@@ -86,7 +87,7 @@
                 android:layout_height="wrap_content"
                 android:background="#ff443f"
                 android:text="右侧的按钮" />
-        </LinearLayout>
+        </LinearLayout>-->
 
     </android.support.v4.widget.DrawerLayout>
 

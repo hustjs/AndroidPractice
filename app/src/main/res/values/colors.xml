@@ -20,4 +20,9 @@
     <color name="androidColorD">#FFBB33</color>
     <color name="androidColorE">#FF4444</color>
     <!--SwipeBack ends-->
+    <!--Hongyang StatusBar color-->
+    <color name="primary">#FF03A9F4</color>
+    <color name="primary_dark">#FF0288D1</color>
+    <color name="status_bar_color">@color/primary_dark</color>
+    <!--ends-->
 </resources>

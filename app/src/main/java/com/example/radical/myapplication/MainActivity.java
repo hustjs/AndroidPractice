@@ -83,6 +83,18 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    @OnClick(R.id.btn_tween)
+    void tweenTest() {
+        intent = new Intent(MainActivity.this, TweenActivity.class);
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.btn_objAnim)
+    void objAnimTest() {
+        intent = new Intent(MainActivity.this, ObjAnimationActivity.class);
+        startActivity(intent);
+    }
+
 
     /**
      * 显示扫描结果
