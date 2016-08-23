@@ -27,7 +27,6 @@ public class BasicDemoActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-        measureStateBar(toolbar);
     }
 
     /**

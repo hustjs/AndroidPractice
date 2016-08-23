@@ -95,6 +95,12 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    @OnClick(R.id.btn_immersive)
+    void immersiveTest() {
+        intent = new Intent(MainActivity.this, ImmersiveActivity.class);
+        startActivity(intent);
+    }
+
 
     /**
      * 显示扫描结果

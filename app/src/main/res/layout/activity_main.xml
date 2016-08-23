@@ -118,6 +118,14 @@
         android:layout_toRightOf="@+id/multiLang"
         android:text="ObjAnim" />
 
+    <Button
+        android:id="@+id/btn_immersive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btn_setting"
+        android:layout_toRightOf="@+id/multiLang"
+        android:text="ImmersiveTest" />
+
 
 
     <TextView

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.radical.myapplication.ImmersiveActivity">
+
+    <ImageView
+        android:layout_centerInParent="true"
+        android:id="@+id/iv_imm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ad" />
+
+    <Button
+        android:id="@+id/getLength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <!-- learn from
+    http://stackoverflow.com/questions/17808527/
+    android-imageview-scale-type-centercrop-->
+    <!--http://stackoverflow.com/questions/11353973/
+    whats-the-difference-between-imageview-scaletype-center-inside-and-fit-center-->
+</RelativeLayout>
