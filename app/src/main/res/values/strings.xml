@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Practice</string>
     <string name="welcome">欢迎</string>
     <string name="email">电话/邮箱</string>
     <string name="password">密码</string>

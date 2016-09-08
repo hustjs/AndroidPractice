@@ -44,9 +44,7 @@
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity android:name=".ButterActivity" />
         <activity android:name=".TabTestActivity" />
-        <activity
-            android:name=".ToolbarActivity"
-            />
+        <activity android:name=".ToolbarActivity" />
         <activity
             android:name=".TabbedActivity"
             android:label="@string/title_activity_tabbed"
@@ -73,7 +71,11 @@
             android:theme="@style/SwipeBackTheme" />
         <activity android:name=".TweenActivity" />
         <activity android:name=".ObjAnimationActivity" />
-        <activity android:name=".ImmersiveActivity"
+        <activity
+            android:name=".ImmersiveActivity"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".TestIntentActivity"></activity>
+        <activity android:name=".ViewDragHelperTest"
             android:theme="@style/AppTheme"></activity>
     </application>
 

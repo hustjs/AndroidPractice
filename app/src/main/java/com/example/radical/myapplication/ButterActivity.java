@@ -79,7 +79,6 @@ public class ButterActivity extends AppCompatActivity {
         subtitle.setText("Field and method binding for Android views.");
         footer.setText("by Jake Wharton");
         hello.setText("Say Hello");
-
         adapter = new SimpleAdapter(this);
         listOfThings.setAdapter(adapter);
     }

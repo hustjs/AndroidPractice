@@ -24,5 +24,6 @@
     <color name="primary">#FF03A9F4</color>
     <color name="primary_dark">#FF0288D1</color>
     <color name="status_bar_color">@color/primary_dark</color>
+    <color name="transparent">#00000000</color>
     <!--ends-->
 </resources>

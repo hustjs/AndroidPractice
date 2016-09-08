@@ -1,7 +1,10 @@
 package com.example.radical.myapplication.fragment;
 
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -11,6 +14,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.radical.myapplication.R;
+
+import java.util.Timer;
+import java.util.TimerTask;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -25,6 +31,7 @@ public class BlankFragment extends Fragment {
 
     // TODO: Rename and change types of parameters
     private int mPage;
+    private ProgressDialog pd;
     /*private String mParam1;
     private String mParam2;*/
 
@@ -96,12 +103,27 @@ public class BlankFragment extends Fragment {
             lazyLoad();
     }
 
+    private Handler mHandler = new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            pd.dismiss();
+        }
+    };
     private void lazyLoad() {
         //如果没有加载过就加载，否则就不再加载了
         if(!mHasLoadedOnce){
             //加载数据操作
             mHasLoadedOnce=true;
         }
-        Toast.makeText(getActivity(),"Lazy Load",Toast.LENGTH_SHORT).show();
+        pd = ProgressDialog.show(getActivity(), "", "加载中，请稍后……");
+        Timer timer = new Timer();
+        TimerTask task=new TimerTask() {
+            @Override
+            public void run() {
+                mHandler.sendEmptyMessage(0);
+            }
+        };
+        timer.schedule(task,1000);
+//        Toast.makeText(getActivity(),"Lazy Load",Toast.LENGTH_SHORT).show();
     }
 }

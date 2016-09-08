@@ -1,6 +1,9 @@
 package com.example.radical.myapplication;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.Shader;
+import android.support.design.widget.TabItem;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
@@ -18,7 +21,7 @@ import com.example.radical.myapplication.fragment.BlankFragment;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class TabTestActivity extends AppCompatActivity {
+public class TabTestActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener{
     private FragmentPagerAdapter pagerAdapter;
 //    private String[] tabTitle = {"Tab1", "Tab2", "Tab3","Tab4", "Tab5", "Tab6","Tab7", "Tab8", "Tab9"};
     @BindView(R.id.tabLayout)
@@ -38,6 +41,22 @@ public class TabTestActivity extends AppCompatActivity {
         viewPager.setOffscreenPageLimit(4);
         tabLayout.setupWithViewPager(viewPager);
         tabLayout.setTabMode(TabLayout.MODE_FIXED);
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                tab.setText(R.string.app_name);
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
         // Iterate over all tabs and set the custom view
         for (int i = 0; i < tabLayout.getTabCount(); i++) {
             TabLayout.Tab tab = tabLayout.getTabAt(i);
@@ -58,5 +77,20 @@ public class TabTestActivity extends AppCompatActivity {
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
         viewPager.setCurrentItem(savedInstanceState.getInt(POSITION));
+    }
+
+    @Override
+    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+    }
+
+    @Override
+    public void onPageSelected(int position) {
+
+    }
+
+    @Override
+    public void onPageScrollStateChanged(int state) {
+
     }
 }

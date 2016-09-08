@@ -1,6 +1,7 @@
 package com.example.radical.myapplication;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -37,6 +38,7 @@ import butterknife.Unbinder;
  * @since 2016-08-12
  */
 public class MultiLangActivity extends Activity {
+    private String TAG = "MultiLangActivity";
     @BindView(R.id.tv_welcome)
     TextView welcom;
     @BindViews({R.id.tv_password, R.id.tv_username})
@@ -67,6 +69,8 @@ public class MultiLangActivity extends Activity {
                 break;
             case R.id.sign_up:
                 Toast.makeText(MultiLangActivity.this, "has signed up", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MultiLangActivity.this, MainActivity.class);
+                startActivity(intent);
                 break;
             default:
                 break;
@@ -95,5 +99,6 @@ public class MultiLangActivity extends Activity {
     protected void onDestroy() {
         super.onDestroy();
         unbinder.unbind();
+        Log.i(TAG, "onDestroy: ");
     }
 }

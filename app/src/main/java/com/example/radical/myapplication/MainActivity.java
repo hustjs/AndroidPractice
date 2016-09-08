@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -25,6 +26,13 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.multiLang)
     void setMultiL() {
+        intent = new Intent(MainActivity.this, MultiLangActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.btn_bknife)
+    void butterTest() {
         intent = new Intent(MainActivity.this, ButterActivity.class);
         startActivity(intent);
     }
@@ -101,6 +109,12 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    @OnClick(R.id.btn_slideMenu)
+    void slideMenuTest() {
+        intent = new Intent(MainActivity.this, ViewDragHelperTest.class);
+        startActivity(intent);
+    }
+
 
     /**
      * 显示扫描结果
@@ -124,7 +138,6 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         mTextView = (TextView) findViewById(R.id.result);
         mImageView = (ImageView) findViewById(R.id.qrcode_bitmap);
-
         //点击按钮跳转到二维码扫描界面，这里用的是startActivityForResult跳转
         //扫描完了之后调到该界面
         Button mButton = (Button) findViewById(R.id.scan);

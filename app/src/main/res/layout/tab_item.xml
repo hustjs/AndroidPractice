@@ -10,11 +10,10 @@
         tools:src="@mipmap/ic_launcher"
         android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="28dp"
         android:layout_gravity="center_horizontal" />
     <TextView
         android:layout_below="@+id/imageView"
-        android:textColor="@color/MaterialGreen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView"
